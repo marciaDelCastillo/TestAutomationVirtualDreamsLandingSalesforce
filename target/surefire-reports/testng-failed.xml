@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.Tests">
         <methods>
-          <include name="enviarFormularioVacio"/>
+          <include name="enviarFormularioCantidadDeCaracteresNoValida"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

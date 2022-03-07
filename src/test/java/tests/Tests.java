@@ -85,6 +85,40 @@ public class Tests {
 		contactPage.assertPageCase7();
 	}
 	
+	@Test // Case 7 to 10: Envio de formulario con errores en formato esperado para el campo
+	//resultado esperado: validacion de cada campo que imposibilite el envio del formulario
+	public void enviarFormularioFormatoNoValido() {
+	
+	SalesForceContactPage contactPage = new SalesForceContactPage(driver);
+	Helpers helper = new Helpers();
+	for(int i=0;i<4;i++) {
+		Dato dato = datos.get(i+7);
+		driver.navigate().to(driver.getCurrentUrl()); //recargo la pagina
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		contactPage.llenarFormulario(dato);
+		helper.sleepSeconds(2);
+		contactPage.assertPageCase7to10(i);
+	}
+	
+	}
+	
+	@Test // Case 7 to 10: Envio de formulario con errores en formato esperado para el campo
+	//resultado esperado: validacion de cada campo que imposibilite el envio del formulario
+	public void enviarFormularioCantidadDeCaracteresNoValida() {
+	
+	SalesForceContactPage contactPage = new SalesForceContactPage(driver);
+	Helpers helper = new Helpers();
+	for(int i=0;i<4;i++) {
+		Dato dato = datos.get(i+11);
+		driver.navigate().to(driver.getCurrentUrl()); //recargo la pagina
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		contactPage.llenarFormulario(dato);
+		helper.sleepSeconds(2);
+		contactPage.assertPageCase11to14(i);
+	}
+	
+	}
+	
 	@AfterMethod
 	public void tearDown() {
 		driver.close();

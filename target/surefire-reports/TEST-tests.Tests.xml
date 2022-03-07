@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="tests.Tests" time="47.266" errors="0" skipped="0">
+<testsuite tests="5" failures="1" name="tests.Tests" time="101.299" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.2+8-LTS-86"/>
@@ -59,7 +59,33 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="tests.Tests" name="enviarFormularioCompletoCorrecto" time="7.582"/>
-  <testcase classname="tests.Tests" name="enviarFormularioFaltandoUnCampo" time="34.082"/>
-  <testcase classname="tests.Tests" name="enviarFormularioVacio" time="5.602"/>
+  <testcase classname="tests.Tests" name="enviarFormularioCantidadDeCaracteresNoValida" time="27.625">
+    <failure message="La validación de cantidad de caracteres del campo  no funcionó expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: La validación de cantidad de caracteres del campo  no funcionó expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at pages.SalesForceContactPage.assertPageCase11to14(SalesForceContactPage.java:171)
+	at tests.Tests.enviarFormularioCantidadDeCaracteresNoValida(Tests.java:117)
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@3fb6a447
+</system-out>
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 59015
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+mar 07, 2022 5:08:41 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+mar 07, 2022 5:08:41 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 98, so returning the closest version found: 97
+mar 07, 2022 5:08:41 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 98 of 97
+</system-err>
+  </testcase>
+  <testcase classname="tests.Tests" name="enviarFormularioCompletoCorrecto" time="6.661"/>
+  <testcase classname="tests.Tests" name="enviarFormularioFaltandoUnCampo" time="33.22"/>
+  <testcase classname="tests.Tests" name="enviarFormularioFormatoNoValido" time="28.152"/>
+  <testcase classname="tests.Tests" name="enviarFormularioVacio" time="5.641"/>
 </testsuite>

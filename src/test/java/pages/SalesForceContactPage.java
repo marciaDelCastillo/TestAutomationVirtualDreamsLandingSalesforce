@@ -95,7 +95,7 @@ public class SalesForceContactPage {
 		   default : 
 		      Assert.assertTrue(false, "Error de programación");
 		}
-		Assert.assertTrue(labelError.getText().contains("Este campo es obligatorio"), "La validación del campo "+nombreError+" no funcionó");
+		Assert.assertTrue(labelError.getText().contains("Este campo es obligatorio"), "La validación de obligatoriedad del campo "+nombreError+" no funcionó");
 
 	}
 	
@@ -103,4 +103,74 @@ public class SalesForceContactPage {
 			Assert.assertTrue(driver.findElement(successDiv).getText().contains("Gracias por contactarte con nosotros"), "El formulario no fue enviado");
 		
 	}
+	
+	//datos: nombre, mail, empresa, producto, telefono (index es el valor que viene con formato no válido y cuya validacion debe aparecer)
+	public void assertPageCase7to10(int index) {
+		WebElement labelError=null;
+		String nombreError="";
+		switch(index)
+		{
+		   case 0 :
+		      labelError = driver.findElement(By.id("contact_form_nombre-error"));
+		      nombreError = "Nombre";
+		      Assert.assertTrue(labelError.getText().contains("Warning"), "La validación de formato del campo "+nombreError+" no funcionó");
+		      break; // break es opcional
+		   case 1 :
+			   labelError = driver.findElement(By.id("contact_form_email-error"));
+			   nombreError = "Email";
+			   Assert.assertTrue(labelError.getText().contains("Por favor, escribe una dirección de correo válida"), "La validación de formato del campo "+nombreError+" no funcionó");
+		      break; // break es opcional
+		   case 2 :
+			   labelError = driver.findElement(By.id("contact_form_empresa-error"));
+			      nombreError = "Empresa";
+			      Assert.assertTrue(labelError.getText().contains("Warning"), "La validación de formato del campo "+nombreError+" no funcionó");
+			  break; // break es opcional   
+		   case 3 :
+			   labelError = driver.findElement(By.id("contact_form_telefono-error"));
+			   nombreError = "Teléfono";
+			   Assert.assertTrue(labelError.getText().contains("Por favor, escribe un número entero válido"), "La validación de formato del campo "+nombreError+" no funcionó"); 
+			  break; // break es opcional
+		   default : 
+		      Assert.assertTrue(false, "Error de programación");
+		}
+		
+
+	}
+	
+	//datos: nombre, mail, empresa, producto, telefono (index es el valor que viene con cantidad de caracteres no válida y cuya validacion debe aparecer)
+	public void assertPageCase11to14(int index) {
+		WebElement labelError=null;
+		String nombreError="";
+		switch(index)
+		{
+		   case 0 :
+		      labelError = driver.findElement(By.id("contact_form_nombre-error"));
+		      nombreError = "Nombre";
+		      break; // break es opcional
+		   case 1 :
+			   if(driver.findElements( By.id("contact_form_email-error") ).size() != 0) {
+				   labelError = driver.findElement(By.id("contact_form_email-error"));
+			   }
+			   nombreError = "Email";
+		      break; // break es opcional
+		   case 2 :
+			   labelError = driver.findElement(By.id("contact_form_empresa-error"));
+			      nombreError = "Empresa";
+			  break; // break es opcional   
+		   case 3 :
+			   labelError = driver.findElement(By.id("contact_form_telefono-error"));
+			   nombreError = "Teléfono";
+			  break; // break es opcional
+		   default : 
+		      Assert.assertTrue(false, "Error de programación");
+		}
+		if(labelError!=null) {
+			Assert.assertTrue(labelError.getText().contains("Por favor, no escribas más de"), "La validación de cantidad de caracteres del campo "+nombreError+" no funcionó");
+		}else {
+			Assert.assertTrue(false, "La validación de cantidad de caracteres del campo "+nombreError+" no funcionó");
+		}
+		
+
+	}
+
 }
