@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import data.Dato;
 import helpers.Helpers;
 
 public class SalesForceContactPage {
@@ -34,15 +35,15 @@ public class SalesForceContactPage {
 		errorLabels = By.tagName("label");
 	}
 
-	public void llenarFormulario(String nombre, String email, String empresa, String producto, String telefono) {
+	public void llenarFormulario(Dato dato) {
 
 		//cargo los valores
-		driver.findElement(nameField).sendKeys(nombre);
-		driver.findElement(mailField).sendKeys(email);
-		driver.findElement(companyField).sendKeys(empresa);
+		driver.findElement(nameField).sendKeys(dato.nombre);
+		driver.findElement(mailField).sendKeys(dato.email);
+		driver.findElement(companyField).sendKeys(dato.empresa);
 		Select selectProduct = new Select(driver.findElement(productDrop));
-		selectProduct.selectByVisibleText(producto);
-		driver.findElement(phoneField).sendKeys(telefono);
+		selectProduct.selectByVisibleText(dato.producto);
+		driver.findElement(phoneField).sendKeys(dato.telefono);
 		Helpers helper = new Helpers();
 		helper.sleepSeconds(2);
 		
