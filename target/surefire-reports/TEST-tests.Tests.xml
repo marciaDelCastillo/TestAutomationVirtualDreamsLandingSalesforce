@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="tests.Tests" time="43.488" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="tests.Tests" time="47.266" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.2+8-LTS-86"/>
@@ -59,7 +59,7 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="tests.Tests" name="enviarFormularioCompletoCorrecto" time="7.615"/>
-  <testcase classname="tests.Tests" name="enviarFormularioFaltandoUnCampo" time="30.267"/>
-  <testcase classname="tests.Tests" name="enviarFormularioVacio" time="5.606"/>
+  <testcase classname="tests.Tests" name="enviarFormularioCompletoCorrecto" time="7.582"/>
+  <testcase classname="tests.Tests" name="enviarFormularioFaltandoUnCampo" time="34.082"/>
+  <testcase classname="tests.Tests" name="enviarFormularioVacio" time="5.602"/>
 </testsuite>
