@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,12 @@
                     <div class="method-list-content passed suite-tests_Tests">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-tests_Tests" title="tests.Tests" class="method navigator-link" hash-for-method="validacionesCampoRequerido">validacionesCampoRequerido</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-tests_Tests" title="tests.Tests" class="method navigator-link" hash-for-method="llenarFormularioCompletoCorrecto">llenarFormularioCompletoCorrecto</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-tests_Tests" title="tests.Tests" class="method navigator-link" hash-for-method="llenarFormularioFaltandoUnCampo">llenarFormularioFaltandoUnCampo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-tests_Tests -->
@@ -127,9 +132,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validacionesCampoRequerido">
-                  </a> <!-- validacionesCampoRequerido -->
-                  <span class="method-name">validacionesCampoRequerido</span>
+                  <a name="llenarFormularioCompletoCorrecto">
+                  </a> <!-- llenarFormularioCompletoCorrecto -->
+                  <span class="method-name">llenarFormularioCompletoCorrecto</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="llenarFormularioFaltandoUnCampo">
+                  </a> <!-- llenarFormularioFaltandoUnCampo -->
+                  <span class="method-name">llenarFormularioFaltandoUnCampo</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,16 +197,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validacionesCampoRequerido')
+data.setCell(0, 1, 'llenarFormularioFaltandoUnCampo')
 data.setCell(0, 2, 'tests.Tests')
-data.setCell(0, 3, 16063);
+data.setCell(0, 3, 33497);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'llenarFormularioCompletoCorrecto')
+data.setCell(1, 2, 'tests.Tests')
+data.setCell(1, 3, 7537);
 window.suiteTableData['tests_Tests']= { tableData: data, tableDiv: 'times-div-tests_Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 41 seconds</span>
               <div id="times-div-tests_Tests">
               </div> <!-- times-div-tests_Tests -->
             </div> <!-- times-div -->
@@ -226,12 +242,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">validacionesCampoRequerido</span>
-                <span class="method-start">16515 ms</span>
+                <span class="method-name">llenarFormularioCompletoCorrecto</span>
+                <span class="method-start">8488 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">32580 ms</span>
+                <span class="method-start">16027 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">16278 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">llenarFormularioFaltandoUnCampo</span>
+                <span class="method-start">25036 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">58533 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-06T13:55:31 ART" name="tests.Tests" finished-at="2022-03-06T13:56:08 ART" duration-ms="36791">
+  <suite started-at="2022-03-07T14:19:46 ART" name="tests.Tests" finished-at="2022-03-07T14:20:49 ART" duration-ms="62753">
     <groups>
     </groups>
-    <test started-at="2022-03-06T13:55:31 ART" name="Command line test" finished-at="2022-03-06T13:56:08 ART" duration-ms="36791">
+    <test started-at="2022-03-07T14:19:46 ART" name="Command line test" finished-at="2022-03-07T14:20:49 ART" duration-ms="62753">
       <class name="tests.Tests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.Tests@7bc1a03d]" started-at="2022-03-06T13:55:31 ART" name="setUp" finished-at="2022-03-06T13:55:47 ART" duration-ms="16513" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.Tests@70b0b186]" started-at="2022-03-07T14:19:46 ART" name="setUp" finished-at="2022-03-07T14:19:54 ART" duration-ms="8487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validacionesCampoRequerido()[pri:0, instance:tests.Tests@7bc1a03d]" started-at="2022-03-06T13:55:47 ART" name="validacionesCampoRequerido" finished-at="2022-03-06T13:56:03 ART" duration-ms="16063" status="PASS">
+        <test-method signature="llenarFormularioCompletoCorrecto()[pri:0, instance:tests.Tests@70b0b186]" started-at="2022-03-07T14:19:54 ART" name="llenarFormularioCompletoCorrecto" finished-at="2022-03-07T14:20:02 ART" duration-ms="7537" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validacionesCampoRequerido -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Tests@7bc1a03d]" started-at="2022-03-06T13:56:03 ART" name="tearDown" finished-at="2022-03-06T13:56:08 ART" duration-ms="4162" status="PASS">
+        </test-method> <!-- llenarFormularioCompletoCorrecto -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Tests@70b0b186]" started-at="2022-03-07T14:20:02 ART" name="tearDown" finished-at="2022-03-07T14:20:02 ART" duration-ms="251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.Tests@70b0b186]" started-at="2022-03-07T14:20:02 ART" name="setUp" finished-at="2022-03-07T14:20:11 ART" duration-ms="8757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="llenarFormularioFaltandoUnCampo()[pri:0, instance:tests.Tests@70b0b186]" started-at="2022-03-07T14:20:11 ART" name="llenarFormularioFaltandoUnCampo" finished-at="2022-03-07T14:20:44 ART" duration-ms="33497" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- llenarFormularioFaltandoUnCampo -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Tests@70b0b186]" started-at="2022-03-07T14:20:44 ART" name="tearDown" finished-at="2022-03-07T14:20:49 ART" duration-ms="4182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

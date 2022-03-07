@@ -5,8 +5,8 @@
     <classes>
       <class name="tests.Tests">
         <methods>
+          <include name="llenarFormularioFaltandoUnCampo"/>
           <include name="setUp"/>
-          <include name="validacionesCampoRequerido"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.Tests -->
