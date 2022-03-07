@@ -51,6 +51,19 @@ public class SalesForceContactPage {
 	}
 	
 	
+	public void assertPageCase1() {
+		List <WebElement> labelErrors = driver.findElements(errorLabels);
+		Boolean condicion = true;
+		int error = -1;
+		for(int i=0;i<5;i++) {
+			if(!labelErrors.get(i).getText().contains("Este campo es obligatorio")) {
+				condicion = false;
+				error = i;
+			}
+		}
+		Assert.assertTrue(condicion, "No funcionó la validación del campo "+error);
+}
+	
 	
 	//datos: nombre, mail, empresa, producto, telefono (index es el valor que viene vacio y cuya validacion debe aparecer)
 	public void assertPageCase2to6(int index) {
@@ -82,10 +95,7 @@ public class SalesForceContactPage {
 		      Assert.assertTrue(false, "Error de programación");
 		}
 		Assert.assertTrue(labelError.getText().contains("Este campo es obligatorio"), "La validación del campo "+nombreError+" no funcionó");
-		/*
-		List <WebElement> mensajes = driver.findElements(errorLabels);
-		Assert.assertTrue((mensajes.get(0)).getText().contains("Este campo es obligatorio"), "La validación del indice "+index+" no funcionó");
-		*/
+
 	}
 	
 	public void assertPageCase7() {

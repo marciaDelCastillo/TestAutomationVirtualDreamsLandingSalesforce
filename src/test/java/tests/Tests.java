@@ -25,6 +25,7 @@ public class Tests {
 		driver.navigate().to("https://virtualdreams.io/salesforce/landing-salesforce/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
+		//posibilidad de navegar desde la pagina de inicio
 		/*
 		HomePage homePage = new HomePage(driver);
 		homePage.ingresarASalesForce();
@@ -36,9 +37,23 @@ public class Tests {
 		*/
 		
 	}
+	
+	@Test // Case 1: Envio de formulario con todos los campos vacios
+			//resultado esperado: todas las validaciones deben aparecer
+	public void enviarFormularioVacio() {
+		
+		SalesForceContactPage contactPage = new SalesForceContactPage(driver);
+		//lectura de casos de prueba
+		//for para correr los distintos casos
+		contactPage.llenarFormulario("", "", "", "Producto", "");
+		Helpers helper = new Helpers();
+		helper.sleepSeconds(3);
+		contactPage.assertPageCase1();
+	}
 
-	@Test // Case 2 to 6. resultado esperado: validacion de cada campo que imposibilite el envio del formulario
-	public void llenarFormularioFaltandoUnCampo() {
+	@Test // Case 2 to 6: Envio de formulario con todos los campos excepto uno, recorriendo todos los campos
+			//resultado esperado: validacion de cada campo que imposibilite el envio del formulario
+	public void enviarFormularioFaltandoUnCampo() {
 		
 		SalesForceContactPage contactPage = new SalesForceContactPage(driver);
 		Helpers helper = new Helpers();
@@ -61,7 +76,7 @@ public class Tests {
 
 	
 	@Test // Case 7. resultado esperado: envio correcto del formulario
-	public void llenarFormularioCompletoCorrecto() {
+	public void enviarFormularioCompletoCorrecto() {
 		
 		SalesForceContactPage contactPage = new SalesForceContactPage(driver);
 		//lectura de casos de prueba
