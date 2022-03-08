@@ -85,7 +85,7 @@ public class Tests {
 		contactPage.assertPageCase7();
 	}
 	
-	@Test // Case 7 to 10: Envio de formulario con errores en formato esperado para el campo
+	@Test // Case 8 to 11: Envio de formulario con errores en formato esperado para el campo
 	//resultado esperado: validacion de cada campo que imposibilite el envio del formulario
 	public void enviarFormularioFormatoNoValido() {
 	
@@ -97,12 +97,12 @@ public class Tests {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		contactPage.llenarFormulario(dato);
 		helper.sleepSeconds(2);
-		contactPage.assertPageCase7to10(i);
+		contactPage.assertPageCase8to11(i);
 	}
 	
 	}
 	
-	@Test // Case 7 to 10: Envio de formulario con errores en formato esperado para el campo
+	@Test // Case 12 to 15: Envio de formulario con exceso de caracteres en cada campo
 	//resultado esperado: validacion de cada campo que imposibilite el envio del formulario
 	public void enviarFormularioCantidadDeCaracteresNoValida() {
 	
@@ -114,7 +114,7 @@ public class Tests {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		contactPage.llenarFormulario(dato);
 		helper.sleepSeconds(2);
-		contactPage.assertPageCase11to14(i);
+		contactPage.assertPageCase12to15(i);
 	}
 	
 	}

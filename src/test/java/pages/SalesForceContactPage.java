@@ -105,7 +105,7 @@ public class SalesForceContactPage {
 	}
 	
 	//datos: nombre, mail, empresa, producto, telefono (index es el valor que viene con formato no válido y cuya validacion debe aparecer)
-	public void assertPageCase7to10(int index) {
+	public void assertPageCase8to11(int index) {
 		WebElement labelError=null;
 		String nombreError="";
 		switch(index)
@@ -138,7 +138,7 @@ public class SalesForceContactPage {
 	}
 	
 	//datos: nombre, mail, empresa, producto, telefono (index es el valor que viene con cantidad de caracteres no válida y cuya validacion debe aparecer)
-	public void assertPageCase11to14(int index) {
+	public void assertPageCase12to15(int index) {
 		WebElement labelError=null;
 		String nombreError="";
 		switch(index)
